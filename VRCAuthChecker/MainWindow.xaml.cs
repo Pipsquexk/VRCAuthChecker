@@ -82,16 +82,6 @@ namespace VRCAuthChecker
 
         private async void CheckAccounts()
         {
-
-            //foreach (string proxy in proxies)
-            //{
-            //    if (proxy.Contains("."))
-            //    {
-            //        prox.Add(proxy);
-            //        Log(proxy);
-            //    }
-            //}
-
             var passAccounts = new List<string>();
             var failAccounts = new List<string>();
 
@@ -106,11 +96,6 @@ namespace VRCAuthChecker
                 var rM = new HttpRequestMessage(HttpMethod.Get, authUri);
 
                 rM.Headers.Add("Cookie", $"auth={accounts[i]}");
-
-                //request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36 OPR/77.0.4054.298";
-                //request.Headers.Add(HttpRequestHeader.Cookie, $"auth={accounts[i]}");
-                //request.Method = "GET";
-                //request.Timeout = 5000;
 
 
                 try
